@@ -306,7 +306,8 @@ ul {
   padding: 20px; }
   @media (min-width: 768px) {
     .advantages__list {
-      grid-template-columns: repeat(3, 1fr); } }
+      grid-template-columns: repeat(3, 1fr);
+      padding: 60px 20px; } }
 
 .advantages__item {
   display: grid;
@@ -319,8 +320,7 @@ ul {
       grid-template-rows: 100px -webkit-max-content -webkit-max-content;
       grid-template-rows: 100px max-content max-content;
       justify-items: center;
-      align-items: start;
-      padding: 40px 18px; } }
+      align-items: start; } }
   @media (min-width: 1200px) {
     .advantages__item {
       padding: 20px 40px; } }
