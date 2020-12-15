@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <title>HTML Academy: Седона</title>
+  <base href="https://htmlacademy-adaptive.github.io/1647713-sedona-21/14/">
+</head>
+
+<body class="page__body">
+
+  <!-- Стили для проверки Pixel Perfect. Начало -->
+  <style>
+    html {
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (width: 320px) {
+      html {
+        background-image: url("img/form-mobile.jpg");
+        background-image: url("img/success-mobile.jpg");
+        background-image: url("img/error-mobile.jpg");
+      }
+    }
+
+    @media (width: 768px) {
+      html {
+        background-image: url("img/form-tablet.jpg");
+        background-image: url("img/success-tablet.jpg");
+        background-image: url("img/error-tablet.jpg");
+      }
+    }
+
+    @media (width: 1280px) {
+      html {
+        background-image: url("img/form-desktop.jpg");
+        background-image: url("img/success-desktop.jpg");
+        background-image: url("img/error-desktop.jpg");
+      }
+    }
+
+    body {
+      opacity: 1;
+    }
+  </style>
+  <!-- Стили для проверки Pixel Perfect. Конец -->
+  <header class="page-header page-header--opened">
+    <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <nav class="main-nav">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">Фото и видео</a>
+        </li>
+        <li class="site-list__item  site-list__item--active">
+          <a class="site-list__link">Форма отзыва</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="page-header__logo logo" href="index.html">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+        <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="100" height="85" alt="city of sedona">
+      </picture>
+    </a>
+  </header>
+
+  <main class="page-main">
+
+    <section class="hero hero--small">
+      <h1 class="visually-hidden">Sedona — welcome to the gorgeous</h1>
+      <img class="hero__background" src="https://via.placeholder.com/320x400" alt="canyon view" width="320"
+        height="400">
+    </section>
+
+    <section class="reviews">
+      <div class="reviews__info text-info">
+        <h2 class="reviews__title text-info__title">Оставьте свой отзыв</h2>
+        <p class="reviews__description text-info__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них,
+          <br>а также о посещенных вами достопримечательностях
+        </p>
+      </div>
+
+      <form class="reviews__form form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__fieldset reviews__fieldset reviews__fieldset--username">
+          <legend class="legend reviews__legend reviews__legend--left">Представьтесь:</legend>
+
+          <ul class="fields-list reviews__fields-list reviews__fields-list--username">
+            <li class="field reviews__field reviews__field--username">
+              <label class="field__label" for="name">Имя*:</label>
+              <input class="field__input" type="text" name="user_name" id="name" placeholder="Петр" required>
+            </li>
+
+            <li class="field reviews__field reviews__field--username">
+              <label class="field__label" for="surname">Фамилия*:</label>
+              <input class="field__input" type="text" name="user_surname" id="surname" placeholder="Иванов" required>
+            </li>
+
+            <li class="field reviews__field reviews__field--username">
+              <label class="field__label" for="patronymic">Отчество:</label>
+              <input class="field__input" type="text" name="user_patronymic" id="patronymic"
+                placeholder="Александрович">
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__fieldset reviews__fieldset reviews__fieldset--horisontal">
+          <legend class="legend reviews__legend">Контактная информация:</legend>
+
+          <ul class="fields-list reviews__fields-list reviews__fields-list--contacts">
+            <li class="field reviews__field reviews__field--contacts">
+              <label class="field__label field__label--contacts" for="phone">
+                <span class="field__label-hidden">Контактный</span> телефон*:
+              </label>
+              <div class="field__group">
+                <input class="field__input" type="tel" name="user_phone" id="phone" placeholder="Введите телефон"
+                  pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                <span class="field__icon field__icon--phone"></span>
+              </div>
+            </li>
+
+            <li class="field reviews__field reviews__field--contacts">
+              <label class="field__label field__label--contacts" for="email">
+                <span class="text-no-wrap">Электронная почта*:</span></label>
+              <div class="field__group">
+                <input class="field__input" type="email" name="user_email" id="email" placeholder="Введите e-mail"
+                  required>
+                <span class="field__icon field__icon--email"></span>
+              </div>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__fieldset reviews__fieldset reviews__fieldset--impression">
+          <legend class="legend reviews__legend reviews__legend--left">Ваше общее впечатление:</legend>
+
+          <ul class="fields-list reviews__fields-list reviews__fields-list--radiobutton">
+            <li>
+              <label class="radio-field reviews__radio-field">
+                <input class="radio-field__input" type="radio" name="impression" value="positive" checked>
+                <span class="radio-field__input-choice"></span>
+                <span class="radio-field__label">Скорее положительное</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="radio-field reviews__radio-field">
+                <input class="radio-field__input" type="radio" name="impression" value="negative">
+                <span class="radio-field__input-choice"></span>
+                <span class="radio-field__label">Скорее отрицательное</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="radio-field reviews__radio-field">
+                <input class="radio-field__input" type="radio" name="impression" value="neutral">
+                <span class="radio-field__input-choice"></span>
+                <span class="radio-field__label">Затрудняюсь ответить</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__fieldset reviews__fieldset  reviews__fieldset--checklist">
+          <legend class="legend reviews__legend reviews__legend--checklist">
+            Посещенные<br>достопримечательности:</legend>
+          <ul class="fields-list reviews__fields-list reviews__fields-list--checklist">
+            <li>
+              <label class="checkbox-field reviews__checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" name="devils_bridge" checked>
+                <span class="checkbox-field__input-choice"></span>
+                <span class="checkbox-field__label">Мост Дьявола</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="checkbox-field reviews__checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" name="mount_bell" checked>
+                <span class="checkbox-field__input-choice"></span>
+                <span class="checkbox-field__label">Гора-Колокол</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="checkbox-field reviews__checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" name="slide_park" checked>
+                <span class="checkbox-field__input-choice"></span>
+                <span class="checkbox-field__label">Слайд-парк</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="checkbox-field reviews__checkbox-field">
+                <input class="checkbox-field__input" type="checkbox" name="red_rocks">
+                <span class="checkbox-field__input-choice"></span>
+                <span class="checkbox-field__label">Красные скалы</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__fieldset reviews__fieldset reviews__fieldset--horisontal">
+          <legend class="legend reviews__legend">Опишите свои эмоции:</legend>
+          <div class="textarea-field reviews__textarea-field">
+            <label class="visually-hidden" for="user-comment">Эмоции</label>
+            <textarea class="field__input" rows="5" id="user-comment" name="comment"
+              placeholder="Опишите подробно все свои восторги">
+            </textarea>
+          </div>
+        </fieldset>
+
+        <div class="reviews__data-processing">
+          <button class="reviews__button button" type="submit">Отправить отзыв</button>
+          <span class="reviews__notice">* — обязательные поля</span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div class="popup popup-reviews popup-reviews--success">
+    <p class="popup__title popup-reviews__title">Ваш отзыв отправлен!</p>
+    <p class="popup__description popup-reviews__description popup-reviews__description--success">Спасибо за ваше участие, ваш отзыв уже поступил к
+      нам.<br>В ближайшее время мы опубликуем его на сайте.
+    </p>
+    <div class="popup__button-wrapper popup-reviews__button-wrapper popup-reviews__button-wrapper--success">
+      <button class="popup__button popup-reviews__button button" type="button">Закрыть окно</button>
+    </div>
+  </div>
+  <div class="popup popup-reviews popup-reviews--error">
+    <p class="popup__title popup-reviews__title">Что-то пошло <br>не так!</p>
+    <p class="popup__description popup-reviews__description popup-reviews__description--error">Проверьте поля, выделенные красным, скорее всего вы
+      забыли их заполнить
+    </p>
+    <div class="popup__button-wrapper popup-reviews__button-wrapper popup-reviews__button-wrapper--error">
+      <button class="popup__button popup-reviews__button button" type="button">Ок</button>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <p class="page-footer__hashtag">#visitsedona</p>
+    <ul class="page-footer__socials-list socials-list">
+      <li class="socials-list__item">
+        <a class="socials-list__link socials-list__link--tw" href="https://twitter.com/" target="_blank">
+          <span class="visually-hidden">Седона в twitter</span>
+          <img class="socials-list__image" src="img/icon-twitter.svg" alt="icon-twitter" width="17" height="14">
+        </a>
+      </li>
+      <li class="socials-list__item">
+        <a class="socials-list__link socials-list__link--fb" href="https://www.facebook.com/" target="_blank">
+          <span class="visually-hidden">Седона в facebook</span>
+          <img class="socials-list__image" src="img/icon-facebook.svg" alt="icon-facebook" width="9" height="19">
+        </a>
+      </li>
+      <li class="socials-list__item">
+        <a class="socials-list__link socials-list__link--youtube" href="https://www.youtube.com/" target="_blank">
+          <span class="visually-hidden">Седона в youtube</span>
+          <img class="socials-list__image" src="img/icon-youtube.svg" alt="icon-youtube" width="20" height="14">
+        </a>
+      </li>
+    </ul>
+    <div class="page-footer__copyright copyright">
+      <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
+        <p class="copyright__text">Разработано</p>
+        <img class="copyright-logo" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="35">
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
