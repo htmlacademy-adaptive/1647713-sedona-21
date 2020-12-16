@@ -805,10 +805,6 @@ button {
     .reviews__field--contacts:not(:last-child) {
       margin-right: 80px; } }
 
-.reviews__radio-field:hover .checkbox-field__input-choice,
-.reviews__checkbox-field:hover .checkbox-field__input-choice {
-  background-color: #e5e5e5; }
-
 .reviews__textarea-field {
   margin-top: 13px; }
   @media (min-width: 768px) {
@@ -870,8 +866,6 @@ button {
   line-height: 1.86;
   text-transform: uppercase;
   color: #333333; }
-  .field__label:hover .field__input-choice {
-    background-color: #e5e5e5; }
   .field__label--contacts {
     padding-left: 22px; }
     @media (min-width: 1200px) {
@@ -939,6 +933,8 @@ button {
     @media (min-width: 768px) {
       .checkbox-field__label::before {
         margin-right: 25px; } }
+  .checkbox-field__label:hover::before {
+    background-color: #e5e5e5; }
 
 .radio-field__input {
   position: absolute;
@@ -982,6 +978,8 @@ button {
     @media (min-width: 768px) {
       .radio-field__label::before {
         margin-right: 19px; } }
+  .radio-field__label:hover::before {
+    background-color: #e5e5e5; }
 
 .popup-reviews {
   display: none;
