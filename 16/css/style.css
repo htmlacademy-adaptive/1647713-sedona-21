@@ -1115,19 +1115,19 @@ button {
 .card-gallery__link {
   position: relative;
   display: block;
-  padding: 50%; }
+  padding-bottom: 100%; }
   @media (min-width: 768px) {
     .card-gallery__link {
-      padding: 41.2%; } }
+      padding-bottom: 82.4%; } }
   @media (min-width: 1200px) {
     .card-gallery__link {
-      padding: 33.38%; } }
+      padding-bottom: 66.75%; } }
   @media (min-width: 768px) {
     .card-gallery__link--wide {
-      padding: 30.86%; } }
+      padding-bottom: 61.73%; } }
   @media (min-width: 1200px) {
     .card-gallery__link--wide {
-      padding: 16.67%; } }
+      padding-bottom: 33.33%; } }
 
 .card-gallery__image {
   position: absolute;
@@ -1250,17 +1250,17 @@ button {
       margin-bottom: 40px; } }
   @media (min-width: 1200px) {
     .video-presentation__item {
-      margin-bottom: 83px; } }
+      margin-bottom: 86px; } }
 
 .video__preview {
   position: relative;
-  padding: 31.41%; }
+  padding-bottom: 62.81%; }
   @media (min-width: 768px) {
     .video__preview {
-      padding: 38.58%; } }
+      padding-bottom: 77.16%; } }
   @media (min-width: 1200px) {
     .video__preview {
-      padding: 31.25%; } }
+      padding-bottom: 62.5%; } }
 
 .video__preview-image {
   position: absolute;
